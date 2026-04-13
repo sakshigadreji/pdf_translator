@@ -1,4 +1,4 @@
-# 🛡️ Universal Offline PDF Translator (Privacy-Focused)
+# Universal Offline PDF Translator (Privacy-Focused)
 
 A high-performance, browser-based PDF translation tool that processes documents 100% offline. Built using Transformers.js and Meta's NLLB-200 AI model, this tool ensures your sensitive data never leaves your machine.
 
