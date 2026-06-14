@@ -3,52 +3,63 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Universal Offline Translator (No-Freeze)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Translator</title>
+
     <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-    <div class="container">
-        <div class="uploader-card">
-            <h2>PDF Translator</h2>
-            <p class="subtitle">Private TS</p>
-
-            <input type="file" id="pdfFile" accept="application/pdf">
-
-            <div class="language-row">
-                <select id="srcLang">
-                    <option value="eng_Latn">English</option>
-                    <option value="hin_Deva">Hindi</option>
-                </select>
-                <select id="targetLang">
-                    <option value="hin_Deva">Hindi</option>
-                    <option value="eng_Latn">English</option>
-                </select>
-            </div>
-
-            <div class="button-group">
-                <button id="translateBtn" class="primary-btn">Download PDF</button>
-                <button id="readBtn" class="secondary-btn">Read Online</button>
-            </div>
-
-            <div class="loader-container" id="loaderContainer">
-                <div class="progress-bar"></div>
-            </div>
-            <div id="status">Ready.</div>
-
-            <div id="previewSection" style="display: none; margin-top: 20px; text-align: left;">
-                <hr style="border:0; border-top:1px solid #eee; margin: 15px 0;">
-                <h4 style="font-size: 0.9rem; margin-bottom: 10px;">Translation Preview:</h4>
-                <div id="textPreview"
-                    style="background:#f8fafc; padding:15px; border-radius:10px; max-height:250px; overflow-y:auto; white-space:pre-wrap; font-size:0.9rem; border:1px solid #e2e8f0;">
-                </div>
-            </div>
-        </div>
-    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>PDF Translator</h1>
+
+        <input type="file" id="pdfFile" accept="application/pdf">
+
+        <div class="langBox">
+
+            <select id="srcLang">
+                <option value="en">English</option>
+            </select>
+
+            <select id="targetLang">
+                <option value="hi">Hindi</option>
+            </select>
+
+        </div>
+
+        <div class="btnBox">
+
+            <button id="translateBtn">
+                Download PDF
+            </button>
+
+            <button id="readBtn">
+                Read Online
+            </button>
+
+        </div>
+
+        <div id="loaderContainer">
+            <p id="status">Loading...</p>
+        </div>
+
+        <div id="previewSection">
+
+            <h2>Preview</h2>
+
+            <div id="textPreview"></div>
+
+        </div>
+
+    </div>
+
     <script type="module" src="script.js"></script>
+
 </body>
 
 </html>
